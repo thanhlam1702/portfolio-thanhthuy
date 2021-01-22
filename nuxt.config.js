@@ -7,7 +7,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'portfolio-thanhthuy',
+    title: 'Thanh Thúy',
     htmlAttrs: {
       lang: 'en',
     },
@@ -26,7 +26,7 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
+  css: ['@/assets/less/all.less'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
@@ -50,5 +50,13 @@ export default {
   axios: {},
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+    loaders: {
+      less: {
+        lessOptions: {
+          javascriptEnabled: true,
+        },
+      },
+    },
+  },
 }
