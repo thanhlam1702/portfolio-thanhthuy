@@ -1,0 +1,32 @@
+// header css file
+.main-wrapper{
+    height: 2000px;
+}
+header{
+    background: @cl-main;
+    height: 60px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    .container-fluid{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+    .logo{
+        width: 200px;
+    }
+    .menu{
+        display: flex;
+        align-items: center;
+        .mid();
+        .menu__item{
+            margin: 0 20px;
+            a{
+                .text(24px, asap, 24px, @text-black, uppercase);
+            }
+        }
+    }
+}

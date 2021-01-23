@@ -5,8 +5,13 @@
   </div>
 </template>
 <script>
-import Header from '@/components/Layout/Header'
+import Header from '@/components/layout/Header'
 export default {
-  components: Header,
+  components: { Header },
+  data() {
+    return {
+      visibleCursor: true,
+    }
+  },
 }
 </script>

@@ -15,7 +15,8 @@
     "core-js": "^3.8.2",
     "less": "^4.1.0",
     "less-loader": "^7.3.0",
-    "nuxt": "^2.14.12"
+    "nuxt": "^2.14.12",
+    "nuxt-gsap": "^0.1.4"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^5.0.0",
