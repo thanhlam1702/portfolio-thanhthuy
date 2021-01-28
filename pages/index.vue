@@ -1,5 +1,13 @@
 <template>
   <div class="main-wrapper home">
-    <h1>Content main</h1>
+    <ShortIntro />
   </div>
 </template>
+<script>
+import ShortIntro from '@/components/Intro/ShortIntro'
+export default {
+  components: {
+    ShortIntro,
+  },
+}
+</script>

@@ -1,7 +1,7 @@
 // element file
 
 .main-wrapper{
-    margin-top: 60px;
+    margin-top: @mr-header;
     min-height: calc(100vh - @mr-header);
 }
 
@@ -9,5 +9,45 @@ a{
     text-decoration: none;
 }
 .btn-main{
-    cursor: pointer;
+    font-size: 20px;
+    padding: 10px 60px;
+    border: 1px solid @cl-main;
+    display: block;
+    color: @cl-main;
+    width: max-content;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    transition: @t @cubic;
+    span{
+        z-index: 10;
+    }
+    &::before{
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 0;
+        background: @cl-main-bg;
+        right: 0;
+        top: 0;
+        transition: @t @cubic;
+    }
+    &:hover::before{
+        width: 100%;
+        left: 0;
+        transition: @t @cubic;
+    }
+    &:hover{
+        transition: @t @cubic;
+        color: @text-white;
+        .icon{
+            fill: @text-white;
+            transition: @t @cubic;
+        }
+    }
+}
+.icon{
+    height: 24px;
+    width: 24px;
 }

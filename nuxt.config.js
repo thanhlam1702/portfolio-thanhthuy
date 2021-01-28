@@ -2,7 +2,7 @@ export default {
   target: 'static',
 
   router: {
-    base: '/portfolio-thanhthuy/',
+    base: '/portfolio-thanhthuy',
   },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -29,7 +29,19 @@ export default {
   css: ['@/assets/font/font.css', '@/assets/less/all.less'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [
+    {
+      src: '~/plugins/VueFlickity.js',
+      ssr: false,
+    },
+    {
+      src: '~/plugins/VueTyper.js',
+      ssr: false,
+    },
+    {
+      src: '~/plugins/Icon.js',
+    },
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -46,6 +58,7 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     'nuxt-gsap',
+    'svg-to-vue-component/nuxt',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios

@@ -16,7 +16,10 @@
     "less": "^4.1.0",
     "less-loader": "^7.3.0",
     "nuxt": "^2.14.12",
-    "nuxt-gsap": "^0.1.4"
+    "nuxt-gsap": "^0.1.4",
+    "svg-to-vue-component": "^0.3.8",
+    "vue-flickity": "^1.2.1",
+    "vue-typer": "^1.2.0"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^5.0.0",

@@ -1,0 +1,48 @@
+footer{
+    padding: 60px 0;
+    background: #000;
+    color: #fff;
+    .title{
+        font-size: 28px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    .mail{
+        font-size: 60px;
+        text-align: center;
+        margin-top: 20px;
+    }
+    .phone{
+        font-size: 24px;
+        text-align: center;
+        margin-top: 20px;
+    }
+}
+
+// responsive
+.tablet({
+    footer{
+        .title{
+            font-size: 22px;
+        }
+        .mail{
+            font-size: 44px;
+        }
+        .phone{
+            font-size: 18px;
+        }
+    }
+});
+.mobile-xss({
+    footer{
+        .title{
+            font-size: 18px;
+        }
+        .mail{
+            font-size: 28px;
+        }
+        .phone{
+            font-size: 14px;
+        }
+    }
+});
