@@ -23,20 +23,6 @@
         }
         &-about{
             margin-top: 20px;
-            .btn-main{
-                &:hover{
-                    .icon{
-                        transform: translateX(30px);
-                        transition: @t @cubic;
-                    }
-                }
-            }
-            .icon{
-                z-index: 10;
-                fill: @cl-main;
-                transform: translateX(10px);
-                transition: @t @cubic;
-            }
         }
     }
     &__right{
@@ -44,6 +30,7 @@
         &-img{
             height: 100%;
             position: relative;
+            perspective: 1200px;
             img{
                 object-fit: cover;
                 .mid();

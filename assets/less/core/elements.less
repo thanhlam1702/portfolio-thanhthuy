@@ -1,10 +1,7 @@
 // element file
-
-.main-wrapper{
-    margin-top: @mr-header;
-    min-height: calc(100vh - @mr-header);
+:root{
+    --pd-60: 60px;
 }
-
 a{
     text-decoration: none;
 }
@@ -22,6 +19,12 @@ a{
     transition: @t @cubic;
     span{
         z-index: 10;
+    }
+    .icon{
+        z-index: 10;
+        fill: @cl-main;
+        transform: translateX(10px);
+        transition: @t @cubic;
     }
     &::before{
         content: '';
@@ -43,6 +46,7 @@ a{
         color: @text-white;
         .icon{
             fill: @text-white;
+            transform: translateX(30px);
             transition: @t @cubic;
         }
     }
@@ -51,3 +55,17 @@ a{
     height: 24px;
     width: 24px;
 }
+
+.mobile({
+    :root{
+        --pd-60: 40px;
+    }
+    .btn-main{
+        font-size: 14px;
+        padding: 6px 30px;
+        .icon{
+            height: 16px;
+            width: 16px;
+        }
+    }
+});

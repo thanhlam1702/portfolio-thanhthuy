@@ -1,5 +1,6 @@
 <template>
   <div class="app">
+    <!-- <CursorEffect /> -->
     <Header />
     <Nuxt />
     <Footer />
@@ -8,16 +9,13 @@
 <script>
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
+// import CursorEffect from '@/components/CursorEffect'
 
 export default {
   components: {
     Header,
     Footer,
-  },
-  data() {
-    return {
-      visibleCursor: true,
-    }
+    // CursorEffect,
   },
 }
 </script>

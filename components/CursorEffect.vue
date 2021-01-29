@@ -4,20 +4,20 @@
 
 <script>
 export default {
-  mounted() {
-    const _this = this
-    const cursor = document.querySelector('.cursor')
-    window.addEventListener('mousemove', function (e) {
-      _this.$gsap.to('.cursor', {
-        x: e.pageX - cursor.clientWidth / 2,
-        y: e.pageY - cursor.clientWidth / 2,
-        duration: 0.2,
-      })
-    })
-  },
+  // mounted() {
+  //   const _this = this
+  //   const cursor = document.querySelector('.cursor')
+  //   window.addEventListener('mousemove', function (e) {
+  //     _this.$gsap.to('.cursor', {
+  //       x: e.pageX - cursor.clientWidth / 2,
+  //       y: e.pageY - cursor.clientWidth / 2,
+  //       duration: 0.2,
+  //     })
+  //   })
+  // },
 }
 </script>
-<style lang="less" scoped>
+<style lang="less">
 .cursor {
   width: 60px;
   height: 60px;
@@ -29,5 +29,15 @@ export default {
   left: 0;
   z-index: 999;
   pointer-events: none;
+}
+@media (max-width: 1200px) {
+  .cursor {
+    display: none;
+  }
+}
+body,
+html,
+* {
+  cursor: none !important;
 }
 </style>

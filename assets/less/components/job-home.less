@@ -1,0 +1,116 @@
+.job-contain{
+    padding-top: var(--pd-60);
+    padding-bottom: var(--pd-60);
+    .title{
+        font-size: 40px;
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 40px;
+        letter-spacing: 2px;
+        font-weight: 600;
+    }
+}
+.job{
+    display: flex;
+    padding: 20px 0;
+    &__img{
+        position: relative;
+        height: 400px;
+        width: 40%;
+        flex-shrink: 0;
+        overflow: hidden;
+        img{
+            object-fit: cover;
+            .mid();
+        }
+    }
+    &__content{
+        display: flex;
+        margin-left: 60px;
+        flex-direction: column;
+        justify-content: center;
+        &-title{
+            font-size: 32px;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            &::before{
+                content: '';
+                display: block;
+                height: 2px;
+                width: 60px;
+                background: @cl-main;
+                margin-right: 10px;
+                flex-shrink: 0;
+            }
+        }
+        &-description{
+            font-weight: initial;
+            font-size: 20px;
+            margin-top: 30px;
+            letter-spacing: 0.5px;
+        }
+        .btn-main{
+            margin-top: 20px;
+        }
+    }
+    &:nth-child(2n + 1){
+        flex-direction: row-reverse;
+        .job__content{
+            margin-left: initial;
+            margin-right: 60px;
+        }
+    }
+}
+
+// responsive
+.tablet({
+    .job{
+        display: flex;
+        flex-direction: column;
+        &__img{
+            width: initial;
+        }
+        &__content{
+            margin-left: initial;
+            &-title{
+                margin-top: 20px;
+            }
+        }
+        &:nth-child(2n + 1){
+            flex-direction: column;
+            .job__content{
+                margin-left: initial;
+                margin-right: initial;
+            }
+        }
+    } 
+});
+.mobile({
+    .job-contain{
+        .title{
+            font-size: 28px;
+        }
+    }
+    .job{
+        &__content{
+            &-title{
+                font-size: 24px;
+                &::before{
+                    display: none;
+                }
+            }
+            &-description{
+                font-size: 12px;
+                line-height: 20px;
+            }
+        }
+    } 
+});
+.mobile({
+    .job{
+        &__img{
+            height: 200px;
+        }
+    }
+});

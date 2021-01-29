@@ -106,11 +106,7 @@
     text-overflow: ellipsis;
 }
 
-.desktop-large(@content) {
-    @media (max-width: @lg-max) {
-        @content();
-    }
-}
+
 
 .hover-name{
     &::after{
@@ -177,7 +173,11 @@
         background-color: #ced0d4;
     }
 }
-
+.desktop-large(@content) {
+    @media (max-width: @lg-max) {
+        @content();
+    }
+}
 // 1200px
 // for responsive
 .desktop(@content) {
